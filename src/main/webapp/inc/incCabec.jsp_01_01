@@ -1,0 +1,35 @@
+<%@ page import="javax.naming.*,java.math.*,java.sql.*,java.util.*,javax.sql.DataSource,com.infinity.cad.*,com.flexnet.utl.*"%><%!
+	public void Close(Connection conn)
+	{
+		if ( conn != null )
+		{
+			try
+			{
+				conn.close();
+			}
+			catch (SQLException e)
+			{
+				e.printStackTrace(System.out);
+			}
+		}
+	}
+%><%
+	Connection conn 					= 	null;
+// Obtain our environment naming context
+// --	Context initCtx 				= 	new InitialContext();
+//		Context envCtx 					= 	(Context) new InitialContext().lookup("java:comp/env");
+// Look up our data source
+// --	DataSource ds 					= 	(DataSource) envCtx.lookup("jdbc/sistema");
+// Allocate and use a connection from the pool
+// --	conn 							= 	ds.getConnection();
+	try { Class.forName("com.mysql.jdbc.Driver"); }
+	catch (ClassNotFoundException e) { out.write("Getting class: " + e); }
+  	try
+	{ 
+//		Context envCtx 					= 	(Context) new InitialContext().lookup("java:comp/env");
+//		conn 							= 	((DataSource) envCtx.lookup("jdbc/sistema")).getConnection();
+//		conn 							= 	DriverManager.getConnection("jdbc:mysql://192.168.1.3:3306/sistema?useSSL=false", "sistema", "sistemA*"); 
+        conn                            = 	DriverManager.getConnection("jdbc:mysql://mysql3000.mochahost.com:3306/portalin_infdb011?noAccessToProcedureBodies=true", "portalin_admin11", "964ZraHqJuKifrz");
+	} 
+	catch (java.sql.SQLException se) { out.write("Getting connection: " + se); }
+%>

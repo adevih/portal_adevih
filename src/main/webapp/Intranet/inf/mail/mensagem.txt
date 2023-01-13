@@ -1,0 +1,15 @@
+
+Dear Mr/Ms: <!--[DESTINATARIO]-->
+
+
+Here is your Password: <b><!--[SENHA]-->
+
+You Access:
+
+https://www.portal.elysiumtechnology.tech
+
+
+
+With attention,
+
+Elysium Technology

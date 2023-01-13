@@ -1,0 +1,124 @@
+BODY         { TEXT-DECORATION: none; BACKGROUND-COLOR: #DBDCDC; 
+				/* scrollbar-face-color: #d7d8d8; scrollbar-track-color: #d7d8d8; scrollbar-shadow-color: #eeeeee; scrollbar-darkshadow-color: #eeeeee; 
+	           	scrollbar-highlight-color: #eeeeee; scrollbar-3dlight-color: #eeeeee; scrollbar-highlight-color: #000000; scrollbar-arrow-color: #492B07; */ }
+FORM { }
+FORM.login INPUT { PADDING-LEFT: 3px; MARGIN: 1px; FONT-SIZE: 13px; }
+FORM.login INPUT { BACKGROUND-COLOR:#f3f3f3; }
+FORM.login INPUT.focus { MARGIN: 0px }
+FORM.login INPUT.focus { }
+FORM.login SELECT { PADDING-LEFT: 3px; MARGIN: 1px; FONT-SIZE: 13px; }
+FORM.login SELECT { BACKGROUND-COLOR:#f3f3f3; }
+FORM.login SELECT.focus { }
+FORM.login SELECT.focus { COLOR: #000; BACKGROUND-COLOR:#ffffc6; }
+FORM.login INPUT { COLOR: #777 }
+FORM.login INPUT { BORDER-RIGHT: #000 1px solid; BORDER-TOP: #000 1px solid; BORDER-LEFT: #000 1px solid; COLOR: #0c0c0c; BORDER-BOTTOM: #000 1px solid }
+FORM.login INPUT.focus { BORDER-RIGHT: #ffdead 2px solid; BORDER-TOP: #c07300 2px solid; BORDER-LEFT: #c07300 2px solid; BORDER-BOTTOM: #ffdead 2px solid }
+FORM.login INPUT.focus { COLOR: #000; BACKGROUND-COLOR:#ffffc6; }
+.barra       { font-family: Arial,Verdana; font-size: 12px; vertical-align : top; padding-top:0px; line-height: 30px; color: 3F9BC2; }
+.barra a:hover { color: #F48F37; }
+.btncad      { BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px outset; WIDTH: 90px; cursor: pointer; COLOR: #cccccc; BORDER-BOTTOM: 1px outset; FONT-FAMILY: 'Courier New'; FONT-SIZE: 8pt; HEIGHT: 18px; BACKGROUND-COLOR: #4682b4 }
+.btncons     { BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px outset; WIDTH: 20px; cursor: pointer; COLOR: #ffffff; FONT-WEIGHT: bold; BORDER-BOTTOM: 1px outset; FONT-FAMILY: Verdana,'Courier New'; FONT-SIZE: 10px; HEIGHT: 19px; BACKGROUND-COLOR: #428C95 }
+.btnnews     { BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px outset; WIDTH: 20px; cursor: pointer; COLOR: #ffffff; FONT-WEIGHT: bold; BORDER-BOTTOM: 1px outset; FONT-FAMILY: Verdana,'Courier New'; FONT-SIZE: 10px; HEIGHT: 19px; BACKGROUND-COLOR: #B18904 }
+.btnload     { BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px outset; WIDTH: 20px; cursor: pointer; COLOR: #ffffff; FONT-WEIGHT: bold; BORDER-BOTTOM: 1px outset; FONT-FAMILY: Verdana,'Courier New'; FONT-SIZE: 10px; HEIGHT: 19px; BACKGROUND-COLOR: #088A08 }
+.btnDiv      { BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px outset; WIDTH: 75px; cursor: pointer; COLOR: #ffffff; BORDER-BOTTOM: 1px outset; FONT-FAMILY: verdana; HEIGHT: 18px; FONT-SIZE: 8pt; BACKGROUND-COLOR: #4682b4 }
+.btnDivRed   { BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px outset; WIDTH: 75px; cursor: pointer; COLOR: #ffff00; BORDER-BOTTOM: 1px outset; FONT-FAMILY: verdana; HEIGHT: 18px; FONT-SIZE: 8pt; BACKGROUND-COLOR: #ff0000 }
+.btnform     { BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px outset; WIDTH: 80px; cursor: pointer; COLOR: #ffffff; BORDER-BOTTOM: 1px outset; FONT-FAMILY: 'Courier New'; FONT-SIZE: 11px; HEIGHT: 18px; BACKGROUND-COLOR: #428C95 }
+.btnformRed  { BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px outset; WIDTH: 100px; cursor: pointer; COLOR: #ffff00; BORDER-BOTTOM: 1px outset; FONT-FAMILY: 'Courier New'; FONT-SIZE: 11px; HEIGHT: 18px; BACKGROUND-COLOR: #ff0000 }
+.btnmenu     { BORDER-LEFT-COLOR: #1e90ff; BORDER-BOTTOM-COLOR: #1e90ff; FONT: caption; WIDTH: 174px; cursor: pointer; COLOR: #ffffff; BORDER-TOP-COLOR: #1e90ff; FONT-FAMILY: verdana; HEIGHT: 22px; BACKGROUND-COLOR: #00008b; BORDER-RIGHT-COLOR: #1e90ff; TEXT-INDENT: 2px; TEXT-ALIGN: left }
+.btnperfil   { BORDER-LEFT-COLOR: #1e90ff; BORDER-BOTTOM-COLOR: #1e90ff; FONT: caption; WIDTH: 100px; cursor: pointer; COLOR: #ffffff; BORDER-TOP-COLOR: #1e90ff; FONT-FAMILY: verdana; HEIGHT: 22px; BACKGROUND-COLOR: #00008b; TEXT-ALIGN: left; BORDER-RIGHT-COLOR: #1e90ff }
+.cabMenu     { FONT-SIZE: 8pt; BORDER-LEFT: white outset; COLOR: #000000; FONT-FAMILY: Arial,sans-serif; TEXT-ALIGN: center}
+.cabAcesso   { FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: Arial,sans-serif; }
+.exit        { FONT-WEIGHT: bolder; FONT-SIZE: 10pt; COLOR: white; FONT-FAMILY: 'MS Sans Serif'; BACKGROUND-COLOR: #4682b4 }
+.exit A      { COLOR: white; TEXT-DECORATION: none; }
+.exitLink    { }
+.idprog      { FONT-SIZE: 10px; COLOR: #000080; FONT-WEIGHT: normal; LINE-HEIGHT: 9px; TEXT-ALIGN: right; FONT-FAMILY: arial }
+.input	     { BORDER-RIGHT: #0404B4 1px outset; BORDER-TOP: #0404B4 1px outset; FONT-SIZE: 11px; BORDER-LEFT: #0404B4 1px outset; COLOR: #000080; BORDER-BOTTOM: #0404B4 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #f0f8ff }
+.input2      { BORDER-RIGHT: #0404B4 1px outset; BORDER-TOP: #0404B4 1px outset; FONT-SIZE: 9pt; BORDER-LEFT: #0404B4 1px outset; COLOR: #000080; BORDER-BOTTOM: #0404B4 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #f0f8ff; } 
+.input11    { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE:11pt; BORDER-LEFT: #000000 1px outset; COLOR: #000000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; }
+.input[type=text]:focus { background: #f4fa58; border:1px solid #0022FF; box-shadow: 0 0 10px #5D71F1;}
+/*
+.input { background: #f0f8ff; border:1px solid #000000; font-size: 11px; font-family: arial, verdana; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; box-shadow: 1px 1px 2px #333333; -moz-box-shadow: 1px 1px 2px #333333; -webkit-box-shadow: 1px 1px 2px #333333; }
+.input2 { background: #f0f8ff; border:1px solid #000000; font-size: 9pt; font-family: arial, verdana; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; box-shadow: 1px 1px 2px #333333; -moz-box-shadow: 1px 1px 2px #333333; -webkit-box-shadow: 1px 1px 2px #333333; }
+.input:focus { font-size: 9pt; background: #f4fa58; border:1px solid #0022FF; box-shadow: 0 0 10px #5D71F1;}
+.input2:focus { font-size: 9pt; background: #f4fa58; border:1px solid #0022FF; box-shadow: 0 0 10px #5D71F1;}
+input:focus { background-color: f4fa58; }
+*/
+.inputlin     { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE: 10px; BORDER-LEFT: #000000 1px outset; COLOR: #000080; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #f0f8ff }
+.inputDis    { BORDER-RIGHT: #0404B4 1px outset; BORDER-TOP: #0404B4 1px outset; FONT-SIZE: 8pt; BORDER-LEFT: #0404B4 1px outset; COLOR: #000000; BORDER-BOTTOM: #0404B4 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #d3d3d3 }
+.inputDis2   { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px outset; COLOR: #000000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #eeeeee; }
+.inputDis3   { FONT-SIZE: 7pt; FONT-FAMILY: Arial, verdana; BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; BORDER-LEFT: #000000 1px outset; COLOR: #000000; BORDER-BOTTOM: #000000 1px outset; BACKGROUND-COLOR: #d3d3d3 }
+.inputDis4   { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE: 8pt; BORDER-LEFT: #000000 1px outset; COLOR: #000000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #e9e9e9 }
+.inputDis5   { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE: 7pt; BORDER-LEFT: #000000 1px outset; COLOR: #000000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #e9e9e9 }
+.inputDis10  { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE:10pt; BORDER-LEFT: #000000 1px outset; COLOR: #000000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #eeeeee; }
+.inputDis11   { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE:11pt; BORDER-LEFT: #000000 1px outset; COLOR: #000000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #eeeeee; }
+.inputDis12   { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE:12pt; BORDER-LEFT: #000000 1px outset; COLOR: #000000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #eeeeee; }
+.input10     { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE:10pt; BORDER-LEFT: #000000 1px outset; COLOR: #000080; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #f0f8ff }
+.inputIn     { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px outset; COLOR: #006400; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #e9e9e9 }
+.inputOu     { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px outset; COLOR: #FF0000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #e9e9e9 }
+.inputTot    { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px outset; COLOR: #FF0000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #ffffCC }
+.inputF1     { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE:10px; BORDER-LEFT: #000000 1px outset; COLOR: #000080; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: 'Courier New', Arial, verdana; BACKGROUND-COLOR: #f0f8ff }
+.linhaA  { FONT-SIZE: 8pt; COLOR: #000080; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial, Helvetica, Tahoma; BACKGROUND-COLOR: #f0f0f0 }
+.linhaAA { FONT-SIZE: 8pt; COLOR: #000080; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Verdana, Arial, Helvetica, Tahoma; BACKGROUND-COLOR: #f0f0f0 }
+.linhaB  { FONT-SIZE: 8pt; COLOR: #000080; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial, Helvetica, Tahoma; BACKGROUND-COLOR: #d0d0d0 }
+.linhaBB  { FONT-SIZE: 8pt; COLOR: #000080; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Verdana, Arial, Helvetica, Tahoma; BACKGROUND-COLOR: #d0d0d0 }
+.toplin      { FONT-SIZE: 9px; COLOR: #000080; FONT-WEIGHT: normal; FONT-FAMILY: Arial, Helvetica, Tahoma; vertical-align: top; }
+.linha           { FONT-SIZE: 11px; COLOR: #000080;                            LINE-HEIGHT: 20px; FONT-WEIGHT: normal; FONT-FAMILY: Arial, Helvetica, Tahoma; }
+.linhar          { FONT-SIZE: 11px; COLOR: #000080; TEXT-ALIGN: right;         LINE-HEIGHT: 20px; FONT-WEIGHT: normal; FONT-FAMILY: Arial, Helvetica, Tahoma; }
+.linha-a       { FONT-SIZE: 11px; COLOR: #000080; BACKGROUND-COLOR: #D2F0FC; LINE-HEIGHT: 21px; FONT-WEIGHT: normal; FONT-FAMILY: Arial, Helvetica, Tahoma; }
+.linha-b       { FONT-SIZE: 11px; COLOR: #000080; BACKGROUND-COLOR: #B1E5FB; LINE-HEIGHT: 21px; FONT-WEIGHT: normal; FONT-FAMILY: Arial, Helvetica, Tahoma; }
+.linha-i          { FONT-SIZE: 11px; COLOR: #088A29;                            LINE-HEIGHT: 20px; FONT-WEIGHT: normal; font-style: italic; FONT-FAMILY: Arial, Helvetica, Tahoma; }
+.linha-r          { FONT-SIZE: 11px; COLOR: #FF8000;                            LINE-HEIGHT: 20px; FONT-WEIGHT: normal; font-style: italic; FONT-FAMILY: Arial, Helvetica, Tahoma; }
+.linha-s          { FONT-SIZE: 11px; COLOR: #FF0000;                            LINE-HEIGHT: 20px; FONT-WEIGHT: normal; font-style: italic; FONT-FAMILY: Arial, Helvetica, Tahoma; }
+.linhaBold   { FONT-SIZE: 11px; COLOR: #000080;                            LINE-HEIGHT: 18px; FONT-WEIGHT: bolder; FONT-FAMILY: Arial, Helvetica, Tahoma; }
+.linha2      { FONT-SIZE: 10pt; COLOR: #000080; FONT-WEIGHT: normal; LINE-HEIGHT: 16pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaM      { FONT-SIZE: 10px; COLOR: #000080; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaSep  { FONT-SIZE: 8pt; COLOR: #000080; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial, Helvetica, Tahoma; BACKGROUND-COLOR: #87cefa }
+.linhaTop    { FONT-SIZE: 8pt; COLOR: #000000; FONT-WEIGHT: normal; LINE-HEIGHT: 10px; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaF      { FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: 'Courier New', verdana, Courier; BACKGROUND-COLOR: #ffffff; }
+.linhaSel    { FONT-SIZE: 8pt; COLOR: #336600; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaCab    { FONT-SIZE: 9pt; COLOR: #000080; LINE-HEIGHT: 14pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaDet    { FONT-SIZE: 8pt; COLOR: #000080; LINE-HEIGHT: 14pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaIn     { FONT-SIZE: 9pt; COLOR: #006400; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaMov    { FONT-SIZE: 9pt; COLOR: #000080; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaNeg    { FONT-SIZE: 8pt; COLOR: #FF0000; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaObs    { FONT-SIZE: 7pt; COLOR: #000080; LINE-HEIGHT: 7pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaObsSel { FONT-SIZE: 7pt; COLOR: #348017; LINE-HEIGHT: 7pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaObsInf { FONT-SIZE: 6pt; COLOR: #000080; LINE-HEIGHT: 7pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaOu     { FONT-SIZE: 9pt; COLOR: #FF0000; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaPos    { FONT-SIZE: 8pt; COLOR: #006400; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.linhaBlue   { FONT-SIZE: 8pt; COLOR: #0000ff; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial, Helvetica, Tahoma; }
+.linhaGold   { FONT-SIZE: 8pt; COLOR: #660000; FONT-WEIGHT: normal; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial, Helvetica, Tahoma }
+.lka         { font-family: Verdana; font-size: 10px; color: #000000; text-decoration: none; }
+.selec       { FONT-SIZE: 8pt; COLOR: #000080; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #f0f8ff; z-index: 1; }
+.selecF      { FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: 'Courier New', Arial, verdana; BACKGROUND-COLOR: #f0f8ff }
+.selecF1     { FONT-SIZE:10px; COLOR: #000000; FONT-FAMILY: 'Courier New', Arial, verdana; BACKGROUND-COLOR: #f0f8ff }
+.selecF7     { FONT-SIZE: 7pt; COLOR: #000000; FONT-FAMILY: 'Courier New', Arial, verdana; BACKGROUND-COLOR: #f0f8ff }
+.selecF9     { FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: 'Courier New', Arial, verdana; BACKGROUND-COLOR: #f0f8ff }
+.selecF10     { FONT-SIZE: 10pt; COLOR: #000080; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #f0f8ff; z-index: 1; }
+.selecF11      { FONT-SIZE: 11pt; COLOR: #000080; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #f0f8ff; z-index: 1; }
+.selecF12      { FONT-SIZE: 12pt; COLOR: #000080; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #f0f8ff; z-index: 1; }
+.selecF12c      { FONT-SIZE: 11pt; LINE-HEIGHT: 28px; COLOR: #000080; FONT-FAMILY: Arial, verdana;  z-index: 1; }
+.selecF12b      { FONT-SIZE: 11pt; LINE-HEIGHT: 28px; FONT-WEIGHT: bold; COLOR: #000080; FONT-FAMILY: Arial, verdana;  z-index: 1; }
+.selecF12s     { FONT-SIZE: 12pt; COLOR: #000080; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #99cffff; z-index: 1; }
+
+.selecFF10  { FONT-SIZE: 10pt; COLOR: #000000; FONT-FAMILY: 'Courier New', Arial, verdana, monospace; BACKGROUND-COLOR: #f0f8ff }
+.selecFF11  { FONT-SIZE: 11pt; COLOR: #000000; FONT-FAMILY: 'Courier New', Arial, verdana, monospace; BACKGROUND-COLOR: #f0f8ff }
+.subTitulo   { FONT-SIZE: 10pt; COLOR: #000000; FONT-FAMILY: Courier, Verdana; }
+.subTituloRel{ FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: Arial }
+.Texto       { font-family: verdana; color: #000000; font-size: 8pt; line-height: 12px; text-decoration: none;}
+.titCal      { FONT-WEIGHT: bold; FONT-SIZE: 15pt; COLOR: #000000; FONT-FAMILY: 'Courier New', verdana, Courier; BACKGROUND-COLOR: #87ceeb; }
+.titform     { FONT-WEIGHT: bold; FONT-SIZE: 13pt; COLOR: #000000; FONT-FAMILY: 'Courier New', verdana, Courier; BACKGROUND-COLOR: #00bfff; }
+.tittab      { FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #000000; FONT-FAMILY: 'Courier New', verdana, Courier; BACKGROUND-COLOR: #F9AA52; }
+.tittab2     { FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, 'Courier New', verdana, Courier; BACKGROUND-COLOR: #00bfff; }
+.tittab2b    { FONT-SIZE: 12px; COLOR: #000080; FONT-FAMILY: Arial, 'Courier New', verdana, Courier; BACKGROUND-COLOR: #ffffff; position: relative; top: -2px; }
+.tittab3     { FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: 'Courier New', verdana, Courier; BACKGROUND-COLOR: #00bfff; }
+.tittab4     { FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Arial, 'Courier New', verdana, Courier; BACKGROUND-COLOR: #00bfff; }
+.ultima      { FONT-SIZE: 10px; COLOR: #000000; FONT-WEIGHT: normal; LINE-HEIGHT: 9px; FONT-FAMILY: arial }
+.fita     { FONT-SIZE: 14px; COLOR: #000000; FONT-FAMILY: 'Courier New', Courier, verdana; }
+.folha       { BORDER: none; FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: right; }
+.linhaP      { FONT-SIZE:9px;COLOR:#000080;FONT-WEIGHT:normal;FONT-FAMILY:Tahoma,Arial,Helvetica }
+div.pagination span { padding:12px;margin:12px;text-align:center; LINE-HEIGHT: 26pt;}
+div.pagination span { padding:4px 6px 4px 6px;margin:1px;border:1px solid #AAAADD;text-decoration: none;color: #000099;	}
+div.pagination span:hover, span:active { border: 1px solid #000099;color: #000; }
+div.pagination span.current { padding: 1px 3px 1px 3px;margin: 1px;border: 1px solid #000099;font-weight: bold;background-color: #000099;color: #FFF;}
+div.pagination span.disabled { padding: 1px 3px 1px 3px;margin: 1px;border: 1px solid #AAAADD;color: #000099;	}

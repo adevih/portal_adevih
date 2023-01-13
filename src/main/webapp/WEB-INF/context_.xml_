@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Context relodable="true">
+	<ResourceLink 	name="jdbc/sistema"
+					global="jdbc/sistema"
+					auth="Container"
+					type="javax.sql.DataSouce" />

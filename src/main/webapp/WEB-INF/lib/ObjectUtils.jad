@@ -1,0 +1,274 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 21/09/2022 16:30:23
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   ObjectUtils.java
+
+package com.cloudinary.utils;
+
+import java.io.*;
+import java.text.*;
+import java.util.*;
+import org.cloudinary.json.*;
+
+// Referenced classes of package com.cloudinary.utils:
+//            Base64Coder, StringUtils
+
+public class ObjectUtils
+{
+
+    public ObjectUtils()
+    {
+    }
+
+    public static String toISO8601(Date date)
+    {
+        DateFormat dateFormat = getDateFormat();
+        return dateFormat.format(date);
+    }
+
+    public static Date fromISO8601(String date)
+        throws ParseException
+    {
+        DateFormat dateFormat = getDateFormat();
+        return (Date)dateFormat.parseObject(date);
+    }
+
+    private static DateFormat getDateFormat()
+    {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.US);
+        dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+        return dateFormat;
+    }
+
+    public static String asString(Object value)
+    {
+        if(value == null)
+            return null;
+        else
+            return value.toString();
+    }
+
+    public static String asString(Object value, String defaultValue)
+    {
+        if(value == null)
+            return defaultValue;
+        else
+            return value.toString();
+    }
+
+    public static String serialize(Object object)
+        throws IOException
+    {
+        ByteArrayOutputStream baos;
+        ObjectOutputStream objectOutputStream;
+        baos = new ByteArrayOutputStream();
+        objectOutputStream = new ObjectOutputStream(baos);
+        String s;
+        objectOutputStream.writeObject(object);
+        s = new String(Base64Coder.encode(baos.toByteArray()));
+        objectOutputStream.close();
+        return s;
+        Exception exception;
+        exception;
+        objectOutputStream.close();
+        throw exception;
+    }
+
+    public static Object deserialize(String base64SerializedString)
+        throws IOException, ClassNotFoundException
+    {
+        byte buf[] = Base64Coder.decode(base64SerializedString);
+        return (new ObjectInputStream(new ByteArrayInputStream(buf))).readObject();
+    }
+
+    public static List asArray(Object value)
+    {
+        if(value == null)
+            return Collections.EMPTY_LIST;
+        if(value instanceof int[])
+        {
+            List array = new ArrayList();
+            int ai[] = (int[])(int[])value;
+            int j = ai.length;
+            for(int k = 0; k < j; k++)
+            {
+                int i = ai[k];
+                array.add(new Integer(i));
+            }
+
+            return array;
+        }
+        if(value instanceof Object[])
+            return Arrays.asList((Object[])(Object[])value);
+        if(value instanceof List)
+        {
+            return (List)value;
+        } else
+        {
+            List array = new ArrayList();
+            array.add(value);
+            return array;
+        }
+    }
+
+    public static Boolean asBoolean(Object value, Boolean defaultValue)
+    {
+        if(value == null)
+            return defaultValue;
+        else
+            return asBoolean(value);
+    }
+
+    public static Boolean asBoolean(Object value)
+    {
+        if(value instanceof Boolean)
+            return (Boolean)value;
+        else
+            return Boolean.valueOf("true".equals(value));
+    }
+
+    public static Float asFloat(Object value)
+    {
+        if(value == null)
+            return null;
+        if(value instanceof Float)
+            return (Float)value;
+        else
+            return Float.valueOf(Float.parseFloat(value.toString()));
+    }
+
+    public static transient Map asMap(Object values[])
+    {
+        if(values.length % 2 != 0)
+            throw new RuntimeException("Usage - (key, value, key, value, ...)");
+        Map result = new HashMap(values.length / 2);
+        for(int i = 0; i < values.length; i += 2)
+            result.put(values[i], values[i + 1]);
+
+        return result;
+    }
+
+    public static Map emptyMap()
+    {
+        return Collections.EMPTY_MAP;
+    }
+
+    public static String encodeMap(Object arg)
+    {
+        if(arg != null && (arg instanceof Map))
+        {
+            Map mapArg = (Map)arg;
+            HashSet out = new HashSet();
+            java.util.Map.Entry entry;
+            for(Iterator iterator = mapArg.entrySet().iterator(); iterator.hasNext(); out.add((new StringBuilder()).append((String)entry.getKey()).append("=").append((String)entry.getValue()).toString()))
+                entry = (java.util.Map.Entry)iterator.next();
+
+            return StringUtils.join(out.toArray(), "|");
+        }
+        if(arg == null)
+            return null;
+        else
+            return arg.toString();
+    }
+
+    public static transient Map only(Map hash, String keys[])
+    {
+        Map result = new HashMap();
+        String as[] = keys;
+        int i = as.length;
+        for(int j = 0; j < i; j++)
+        {
+            String key = as[j];
+            if(hash.containsKey(key))
+                result.put(key, hash.get(key));
+        }
+
+        return result;
+    }
+
+    public static Map toMap(JSONObject object)
+        throws JSONException
+    {
+        Map map = new HashMap();
+        String key;
+        for(Iterator keys = object.keys(); keys.hasNext(); map.put(key, fromJson(object.get(key))))
+            key = (String)keys.next();
+
+        return map;
+    }
+
+    public static JSONObject toJSON(Map map)
+        throws JSONException
+    {
+        JSONObject json = new JSONObject();
+        String field;
+        Object value;
+        for(Iterator iterator = map.entrySet().iterator(); iterator.hasNext(); json.put(field, value))
+        {
+            java.util.Map.Entry entry = (java.util.Map.Entry)iterator.next();
+            field = (String)entry.getKey();
+            value = entry.getValue();
+        }
+
+        return json;
+    }
+
+    private static Object fromJson(Object json)
+        throws JSONException
+    {
+        if(json == JSONObject.NULL)
+            return null;
+        if(json instanceof JSONObject)
+            return toMap((JSONObject)json);
+        if(json instanceof JSONArray)
+            return toList((JSONArray)json);
+        else
+            return json;
+    }
+
+    public static List toList(JSONArray array)
+        throws JSONException
+    {
+        List list = new ArrayList();
+        for(int i = 0; i < array.length(); i++)
+            list.add(fromJson(array.get(i)));
+
+        return list;
+    }
+
+    public static Integer asInteger(Object value, Integer defaultValue)
+    {
+        if(value == null)
+            return defaultValue;
+        if(value instanceof Integer)
+            return (Integer)value;
+        else
+            return Integer.valueOf(Integer.parseInt(value.toString()));
+    }
+
+    public static Long asLong(Object value, Long defaultValue)
+    {
+        if(value == null)
+            return defaultValue;
+        if(value instanceof Long)
+            return (Long)value;
+        else
+            return Long.valueOf(Long.parseLong(value.toString()));
+    }
+
+    public static String toUsageApiDateFormat(Date date)
+    {
+        return (new SimpleDateFormat("dd-MM-yyy")).format(date);
+    }
+
+    public static String toISO8601DateOnly(Date date)
+    {
+        return (new SimpleDateFormat("yyyy-MM-dd")).format(date);
+    }
+
+    public static Date fromISO8601DateOnly(String string)
+        throws ParseException
+    {
+        return (new SimpleDateFormat("yyyy-MM-dd")).parse(string);
+    }
+}

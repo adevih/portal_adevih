@@ -1,0 +1,15 @@
+
+Prezad(o/a): <!--[DESTINATARIO]-->
+
+
+Segue sua senha: <!--[SENHA]-->
+
+Para acessar o Portal Elysium copie o endereço abaixo e cole no seu navegador:
+
+https://www.portal.elysiumtechnology.tech
+
+
+
+Atenciosamente,
+
+Elysium Technology

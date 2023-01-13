@@ -1,0 +1,172 @@
+<%@ include file="inc/incCabec.jsp"%><%
+	String 	strCpf						=	UTLUtils.getStringToString( request.getParameter("cpf") );
+	long	lngColaborador				=	UTLUtils.getStringToLong( request.getParameter("clb") );
+	long	lngCliente					=	UTLUtils.getStringToLong( request.getParameter("cli") );
+	String  strOrigem					=	UTLUtils.getStringToString( request.getParameter("ori") );
+	String  strId						=	"0";
+	String  strCpfFormat				=	UTLUtils.getBranco();
+	String  strNome						=	UTLUtils.getBranco();
+	String  strIdentidade				=	UTLUtils.getBranco();
+	String  strTipoDocumento			=	"0";
+	String  strEndereco					=	UTLUtils.getBranco();
+	String  strCep						=	UTLUtils.getBranco();
+	String  strCarteira					=	"0";
+	String  strEnderecoCarteira			=	UTLUtils.getBranco();
+	String  strEnderecoAlternativo		=	UTLUtils.getBranco();
+	String  strPix						=	UTLUtils.getBranco();
+	String  strBanco					=	UTLUtils.getBranco();
+	String  strAgencia					=	UTLUtils.getBranco();
+	String  strContaCorrente			=	UTLUtils.getBranco();
+	String  strFavorecido				=	UTLUtils.getBranco();
+	String  strTipoCadastro				=	"0";
+	String  strEmail					=	UTLUtils.getBranco();
+	String  strDataInativo				=	UTLUtils.getBranco();
+	String  strTelegram					=	UTLUtils.getBranco();
+	String  strFranquia					=	"0";
+	String  strIdOrigem					=	"0";
+	String  strIdPais					=	"0";
+	String  strMensagem					=	UTLUtils.getBranco();
+	String  strExiste					=	"N";
+	String	strPermiteIncluir			=	"N";
+
+	boolean bErro						=	false;
+	if ( lngCliente > 0 )
+	{
+		CADCliente _cliente				=	new CADCliente( lngCliente, conn );
+		strCpf							=	_cliente.getCpf();
+	}
+	CADClienteNovo _clienteNovo			=	new CADClienteNovo( CADClienteNovo.SITUACAO_PENDENTE, 0L, 0L, strCpf, 0, 0, 0, 0, conn );
+	if ( _clienteNovo.next() )
+	{
+		CADContratoNovo _contrato		=	_clienteNovo.getContrato();
+		if ( _contrato.getIdColaborador() != lngColaborador )
+		{
+			bErro						=	true;
+			strMensagem					=	"\\nATEN\\307\\303O:\\n\\nEste CPF pertence a um Cliente de outro Coordenador!!!\\n\\n";
+			strExiste					=	"S";
+		}
+		else
+		{
+			if ( _clienteNovo.getSituacao() < CADClienteNovo.SITUACAO_APROVADO )
+			{
+				bErro					=	true;
+				strMensagem				=	"\\nATEN\\307\\303O:\\n\\nEste CPF est\\341 em processo de aprova\\347\\343o.\\n\\nAguarde a conclus\\343o para incluir um novo Contrato.\\n\\n";
+				strExiste				=	"S";
+			}
+		}
+	}
+	
+	if ( ! bErro )
+	{
+		CADCliente _cliente				=	new CADCliente( 0, 0L, strCpf, 0, 0, 0, 0, conn );
+		if ( _cliente.next() )
+		{
+			CADContrato _contrato		=	new CADContrato( 0L, lngColaborador, null, 0, 0, 0, 0, 0, conn );
+			if ( _contrato.next() )
+			{
+				if ( _contrato.getIdColaborador() != lngColaborador )
+				{
+					bErro				=	true;
+					strMensagem			=	"\\nATEN\\307\\303:\\n\\nEste CPF pertence a um Cliente de outro Coordenador!!!\\n\n";
+					strExiste			=	"S";
+				}
+			}
+			if ( ! bErro )
+			{
+				strId					=	_cliente.getId() + "";
+				strCpf					=	_cliente.getCpf();
+				strCpfFormat			=	UTLUtils.formatCnpjCpf( _cliente.getCpf() );
+				strNome					=	new String(_cliente.getNome().getBytes("utf-8"));
+				strIdentidade			=	_cliente.getIdentidade();
+				strTipoDocumento		=	_cliente.getTipoDocumento() + "";
+				strEndereco				=	_cliente.getEndereco();
+				strCep					=	_cliente.getCep();
+				strCarteira				=	_cliente.getCarteira() + "";
+				strEnderecoCarteira		=	_cliente.getEnderecoCarteira();
+				strEnderecoAlternativo	=	_cliente.getEnderecoAlternativo();
+				strPix					=	_cliente.getPix();
+				strBanco				=	_cliente.getBanco();
+				strAgencia				=	_cliente.getAgencia();
+				strContaCorrente		=	_cliente.getContaCorrente();
+				strFavorecido			=	_cliente.getFavorecido();
+				strTipoCadastro			=	_cliente.getTipoCadastro() + "";
+				strEmail				=	_cliente.getEmail();
+				if ( _cliente.getDataInativo() == null )
+				{
+					strDataInativo		=	UTLUtils.getBranco();
+				}
+				else
+				{
+					strDataInativo		=	UTLUtils.formatMascara(UTLUtils.getDataAAAAMMDDHHMMSS(_cliente.getDataInativo()), "xxxx-xx-xx xx:xx:xx");
+				}
+				strTelegram				=	_cliente.getTelegram();
+				strFranquia				=	_cliente.getIdFranquia() + "";
+				strIdOrigem				=	_cliente.getId() + "";
+				strIdPais				=	_cliente.getIdPais() + "";
+				strExiste				=	"S";
+				strPermiteIncluir		=	"S";
+				strMensagem				=	"ATEN\\307\\303O:\\n\\nO CPF " + strCpfFormat + " existe para " + (new String(_cliente.getNome().getBytes("utf-8"))) + ".\\n";
+			}
+		}
+		else
+		{
+			strPermiteIncluir			=	"S";
+		}
+	}
+
+	out.write("{\n");
+	out.write("   \"Id\": ");
+	out.write(strId);
+	out.write(",\n   \"CpfFormat\":\"");
+	out.write(strCpfFormat);
+	out.write("\",\n   \"Cpf\":\"");
+	out.write(strCpf);
+	out.write("\",\n   \"Nome\":\"");
+	out.write(strNome);
+	out.write("\",\n   \"Identidade\":\"");
+	out.write(strIdentidade);
+	out.write("\",\n   \"TipoDocumento\":\"");
+	out.write(strTipoDocumento);
+	out.write("\",\n   \"Endereco\":\"");
+	out.write(strEndereco);
+	out.write("\",\n   \"Cep\":\"");
+	out.write(strCep);
+	out.write("\",\n   \"Carteira\":\"");
+	out.write(strCarteira);
+	out.write("\",\n   \"EnderecoCarteira\":\"");
+	out.write(strEnderecoCarteira);
+	out.write("\",\n   \"EnderecoAlternativo\":\"");
+	out.write(strEnderecoAlternativo);
+	out.write("\",\n   \"Pix\":\"");
+	out.write(strPix);
+	out.write("\",\n   \"Banco\":\"");
+	out.write(strBanco);
+	out.write("\",\n   \"Agencia\":\"");
+	out.write(strAgencia);
+	out.write("\",\n   \"ContaCorrente\":\"");
+	out.write(strContaCorrente);
+	out.write("\",\n   \"Favorecido\":\"");
+	out.write(strFavorecido);
+	out.write("\",\n   \"TipoCadastro\":");
+	out.write(strTipoCadastro);
+	out.write(",\n   \"Email\":\"");
+	out.write(strEmail);
+	out.write("\",\n   \"DataInativo\":\"");
+	out.write(strDataInativo);
+	out.write("\",\n   \"Telegram\":\"");
+	out.write(strTelegram);
+	out.write("\",\n   \"Franquia\":");
+	out.write(strFranquia);
+	out.write(",\n   \"IdOrigem\":");
+	out.write(strIdOrigem);
+	out.write(",\n   \"IdPais\":");
+	out.write(strIdPais);
+	out.write(",\n   \"Mensagem\":\"");
+	out.write(strMensagem);
+	out.write("\",\n   \"Existe\":\"");
+	out.write(strExiste);
+	out.write("\",\n   \"PermiteIncluir\":\"");
+	out.write(strPermiteIncluir);
+	out.write("\"\n}\n");
+	out.flush();
+%><%@ include file="inc/incRodape.jsp"%>

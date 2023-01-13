@@ -1,0 +1,256 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: white gray;
+  
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #c1c1c1;
+}
+
+*::-webkit-scrollbar-thumb:vertical {
+  background-image: url('../img/scrollbar.png');
+  border-radius: 20px;
+  border: 1px dashed white;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  height: 80px;
+}
+
+/* */
+
+.grupo-coluna { width:100% }
+.grupo-coluna-l { width: calc(100%/2);float:left; display:block }
+.grupo-coluna-3 { width: calc(100%/3);float:left; display:block }
+.grupo-coluna-r { width: calc(100%/2);float:right; display:block }
+.grupo-coluna: after { clear: both; content: ' '; display: block; }
+
+.panel-form{
+	margin-top: 2px;
+	max-width: 600px;
+}
+.btn-custom {
+	width: 46% !important;
+}
+.btn-custom-3 {
+	width: 30% !important;
+}
+div.pagination span { padding:10px;margin:10px;text-align:center; LINE-HEIGHT: 22pt; font-size: 0.54em;}
+div.pagination span { padding:4px 6px 4px 6px;margin:1px;border:1px solid ##666;text-decoration: none;color: #000;	}
+div.pagination span:hover, span:active { border: 1px solid #666;color: #000; }
+div.pagination span.current { padding: 1px 3px 1px 3px;margin: 1px;border: 1px solid #666;font-weight: bold;background-color: #000;color: #FFF;}
+div.pagination span.disabled { padding: 1px 3px 1px 3px;margin: 1px;border: 1px solid #666;color: #000;	}
+div.pagination span.paginar { font-size: .7em; border: none; outline: none; }
+
+h6{
+	margin: 10px 0;
+	color: #6c757d;
+}
+input, button{
+	border-radius: 25px !important;
+	padding: 2px;
+}
+
+/*
+body {
+	font-family: Helvetica, Sans Serif;
+}
+*/
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: none !important;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+.selecF12 { font-size: 1.2em; color: #6c757d; }
+.linhaBold { font-weight: bold; }
+.selecF12b { font-weight: normal; }
+
+table#tbPes tr{
+	padding: 0 !important;	
+}
+
+table#tbPes td{
+	padding: 0px 10px;
+	line-height: 24px;
+}
+.title_table{
+	padding: 10px 10px !important;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 300px;
+    max-width: 300px;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -300px;
+}
+
+#sidebar .sidebar-header {
+    padding: 18px;
+}
+
+#sidebar #info{
+	font-size: 0.8em;
+	margin-top: 60px;
+	text-align: center;
+}
+
+#sidebar ul.components {
+    padding: 18px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+#sidebar ul li:hover {
+    color: #000;
+    background: #ECECEC;
+    border-left: 5px solid #000;
+}
+#sidebar ul li a {
+	color: #6c757d;
+    padding: 15px;
+    font-size: 0.9em;
+    display: block;
+    margin-left: 20px;
+}
+
+#sidebar ul li a:hover {
+    color: #000;
+    background: #ECECEC;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #000;
+}
+
+#sidebar ul li a.sair{
+	margin-top: 60px;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 18px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    background: #ECECEC;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -300px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}

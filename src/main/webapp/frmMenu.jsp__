@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Cliente</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    
+  
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    	
+</head>
+
+<body>
+		            <h2>CLIENTE CONSULTA</h2>
+		           	<form class="align-content-center" action="cliente_consulta.html">
+						<div class="mb-4">
+							<input type="search" class="form-control shadow-sm" id="busca" placeholder="Buscar" aria-describedby="emailHelp">
+						</div>
+						<div class="mb-4">
+							<button type="submit" class="btn btn-dark btn-custom">
+								Consultar
+							</button>
+							<button type="submit" class="btn btn-dark btn-custom">
+								Novo
+							</button>
+						</div>
+					</form>
+</body>
+
+</html>

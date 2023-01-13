@@ -1,0 +1,23 @@
+BODY         { TEXT-DECORATION: none; BACKGROUND-COLOR: #cccccc; }
+.titform     { FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #000000; FONT-FAMILY: 'Courier New', verdana, Courier; BACKGROUND-COLOR: #00bfff; }
+.subTitulo   { FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana }
+.titDoc      { font-family: Verdana; font-size: 7 pt;}
+.txtDoc      { font-family: Verdana; font-size: 10 pt;}
+.Texto       { font-family: Verdana; font-size: 8 pt;}
+.Alert       { font-family: Verdana; font-size: 8 pt; color: #ff3300;}
+.Texto2      { font-family: "Courier New"; font-size: 8pt;}
+.Lista2      { font-family: "Courier New"; font-size: 8pt; color: #000000; text-decoration: none;}
+
+.Lista       { width: 140px; height: 12px; font-family: Verdana; font-size: 7 pt; color: #000000; text-decoration: none; PADDING-LEFT: 2px; }
+.Lista:hover { BACKGROUND-COLOR:#eeeeee; BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #333333 1px solid; BORDER-LEFT: #333333 1px solid; BORDER-BOTTOM: #333333 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 2px; }
+
+.Adm       { width: 120px; height: 12px; font-family: Verdana; font-size: 7 pt; color: #000000; text-decoration: none; PADDING-LEFT: 2px; }
+.Adm:hover { BACKGROUND-COLOR:#eeeeee; BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #333333 1px solid; BORDER-LEFT: #333333 1px solid; BORDER-BOTTOM: #333333 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; PADDING-TOP: 2px; }
+
+
+.btnform     { BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px outset; WIDTH: 100px; CURSOR: hand; COLOR: #ffffff; BORDER-BOTTOM: 1px outset; FONT-FAMILY: 'Courier New'; FONT-SIZE: 8pt; HEIGHT: 20px; BACKGROUND-COLOR: #4682b4 }
+.btnAnexo    { BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; BORDER-LEFT: 1px outset; WIDTH:  65px; CURSOR: hand; COLOR: #ffffff; BORDER-BOTTOM: 1px outset; FONT-FAMILY: 'Courier New'; FONT-SIZE: 8pt; HEIGHT: 20px; BACKGROUND-COLOR: #4682b4 }
+.input       { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px outset; COLOR: #000000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #ffffff }
+.inputDis    { BORDER-RIGHT: #000000 1px outset; BORDER-TOP: #000000 1px outset; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px outset; COLOR: #000000; BORDER-BOTTOM: #000000 1px outset; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #d3d3d3 }
+.selec       { FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #f0f8ff }
+.selecDis    { FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: Arial, verdana; BACKGROUND-COLOR: #d3d3d3 }

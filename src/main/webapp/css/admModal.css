@@ -1,0 +1,6 @@
+/* ModalWindow */
+.ModalWindowBox { background: #666666; z-index: 1000 }
+.ModalWindowBox a:link, .ModalWindowBox a:visited { border: 1px solid #cccccc; padding: 2px 5px; background: #e3e3e3; margin-right: 6px; text-decoration: none; }
+.ModalWindowBox a:hover, .ModalWindowBox a:active { background: #efefef; text-decoration: none; }
+.ModalWindowContainer { font-family: 'Arial','Verdana'; background: white; padding: 10px; margin: 2px; z-index: 1000 }
+.ModalWindowButtons { font-family: 'Courier New'; FONT-SIZE: 12pt; border-top: 1px solid #cccccc; padding: 10px 0px; margin-top: 20px; text-align: center; }

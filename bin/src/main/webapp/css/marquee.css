@@ -1,0 +1,12 @@
+#divScrollTextCont { position: absolute; width: 290px; height: 330px; overflow: hidden; background-color: #d7d8d8; } 
+#divText 	   { position: absolute; padding: 10px 10px 10px 10px; } 
+.text              { font-family: Tahoma; text-align: left; font-size: 10px; font-weight: normal; font-style: normal; text-decoration: none; width: 290px; } 
+ .text a:link      { color: #3F9BC2; text-decoration: none;} 
+ .text a:visited   { color: #3F9BC2; text-decoration: none;} 
+ .text a:hover     { color: #F48F37; text-decoration: underline; _font-weight: _bold; } 
+.date              { font-family: Tahoma; text-align: left; font-size: 11px; font-weight: bold; font-style: italic; text-decoration: none; color: #F48F37; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; } 
+.category          { font-family: Tahoma; text-align: left; font-size: 11px; font-weight: bold; font-style: normal; text-decoration: underline; color: #F35D00; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; } 
+.category a:link   { color:           #000000; } 
+.category a:visited{ color:           #000000; } 
+.category a:hover  { color:           #000000; } 
+.dateNews          { font-family: Tahoma; font-size: 10px; font-weight: normal; font-style: normal; text-decoration: none; color: #F48F37; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; } 

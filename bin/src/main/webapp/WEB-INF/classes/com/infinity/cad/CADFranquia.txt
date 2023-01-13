@@ -1,0 +1,9 @@
+1|Barra
+2|Nova América
+3|Salvador
+4|São Paulo
+5|Lisboa
+6|Miami
+7|Nova América (Fiança)
+8|Miami (Fiança)
+9|São Paulo (Fiança)

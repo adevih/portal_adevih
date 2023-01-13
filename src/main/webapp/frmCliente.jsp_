@@ -1,0 +1,233 @@
+<%@ include file="inc/incImport.jsp"%>
+<%
+	String	sWhidt						=	request.getParameter("sWhidt");
+	String	sHeight						=	request.getParameter("sHeight");
+	int		iHeight						=	(int)(Integer.parseInt(sHeight) * 0.67);
+
+	String	txtCod						=	UTLUtils.getStringToString( request.getParameter("txtCod") );
+	String	txtCrt						=	UTLUtils.getStringToString( request.getParameter("txtCrt") );
+	UTLCombo carteira					=	new UTLCombo(CADCliente.CARTEIRA);
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="viewport" content="whidth=device-whidth, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="ISO-8859-1">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<title>Infinity Company : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+<link rel="stylesheet" href="css/admStyle.css" type="text/css">
+<script type="text/javascript" src="inc/js/autotab.js"></script>
+<script type="text/Javascript">
+function Foco() {
+	var _corAnt = "";
+	_funf = "function () {_corAnt=this.style.backgroundColor;this.style.backgroundColor='#f4fa58';";
+	_funb = "function () {this.style.backgroundColor=_corAnt;";
+	var f = 0;
+	inputs = document.getElementsByTagName("input");
+	for (var i=0; i<inputs.length; i++) {
+		if ( inputs[i].className == "input" || inputs[i].className == "input2" ) {
+			var _onfocus = inputs[i].onfocus + "";
+			var _onblur = inputs[i].onblur + "";
+			if ( _onfocus.indexOf("{") > -1 ) {
+				for (f=_onfocus.length;f>1;f--) {
+					if (_onfocus.charAt(f) == '}' ) {
+						break;
+					}
+				}
+				_onfocus = _funf + _onfocus.substring(_onfocus.indexOf("{")+1, f);
+			} else {
+				_onfocus = _funf;
+			}
+			if ( _onblur.indexOf("{") > -1 ) {
+				for (f=_onblur.length;f>1;f--) {
+					if (_onblur.charAt(f) == '}' ) {
+						break;
+					}
+				}
+				_onblur = _funb + _onblur.substring(_onblur.indexOf("{")+1, f);
+			} else {
+				_onblur = _funb;
+			}
+			eval("inputs[i].onfocus=" + _onfocus + "};");
+			eval("inputs[i].onblur=" + _onblur +"};" );
+		}
+	}
+
+	if ( document.form1.txtCod.value == "" ) {
+		document.form1.txtCpf.focus();
+	} else {
+		document.form1.txtNom.focus();
+	}
+}
+
+var varSubmit = false;
+function Submeter(acao) {
+	if (acao == "V") {
+		document.form1.action="frmMenu.jsp";
+	}
+	varSubmit = true;
+	document.form1.submit();
+}
+</script>
+<body leftmargin="0" topmargin="0" onload="javascript: Foco();">
+<table border="0" cellpadding="0" cellspacing="0" height="300" width="100%">
+<tr>
+	<td width="10" background="img/_shadow-left.gif" valign="top"><img src="img/_shadow-left-top.gif" width="10" height="10" border="0" alt=""></td>
+	<td width="100%" height="100%" bgcolor="#ffffff">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" height="<%=iHeight%>">
+		<tr>
+			<td bgcolor="#888888" height="1" width="1"><img src="img/trans1x1.gif" width="1" height="1" alt=""></td>
+			<td bgcolor="#888888" height="1" width="100%"><img src="img/trans1x1.gif" width="100%" height="1" alt=""></td>
+			<td bgcolor="#888888" height="1" width="1"><img src="img/trans1x1.gif" width="1" height="1" alt=""></td>
+		</tr>
+		<tr>
+			<td bgcolor="#888888" height="100%" width="1"><img src="img/trans1x1.gif" width="1" height="100%" alt=""></td>
+			<td width="100%" height="100%" align="center" valign="top">
+				<table border="0" cellpadding="0" cellspacing="0" width="30%" height="50%">
+				<br><br>
+				<tr>
+					<td width="100%" height="100%" align="left" valign="top">
+						<table border="0" cellpadding="0" cellspacing="0">
+						<form name="form1" id="form1" method="post">
+						<input type="hidden" name="sWhidt" id="sWhidt" value="<%=sWhidt%>">
+						<input type="hidden" name="sHeight" id="sHeight" value="<%=sHeight%>">
+						<input type="hidden" name="txtCod" id="txtCod" value="<%=txtCod%>">
+						<tr><td width="80"><img src="img/trans1x1.gif" width="80" height="1" alt=""></td><td width="100"><img src="img/trans1x1.gif" width="100" height="1" alt=""></td></tr>
+						<tr class="selecF12"><td colspan=2"><img src="img/drive_user.png" alt="">&nbsp;Cliente</td></tr>
+						<tr><td colspan="2" bgcolor="#999999"><img src="img/trans1x1.gif" width="180" height="1" alt=""></td></tr>
+						<tr><td colspan="2" bgcolor="#eeeeee"><img src="img/trans1x1.gif" width="180" height="1" alt=""></td></tr>
+						<tr class="cabAcesso" height="26">
+							<td>CPF:</td>
+							<td><input class="input" type="text" name="txtCpf" id="txtCpf" size="12" ths="1" prv="20" nxt="2" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>Nome:</td>
+							<td><input class="input" type="text" name="txtNome" id="txtNome" size="50" ths="2" prv="1" nxt="3" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>Identidade:</td>
+							<td><input class="input" type="text" name="txtIdt" id="txtIdt" size="18" ths="3" prv="2" nxt="4" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>Endereço:</td>
+							<td><input class="input" type="text" name="txtEnd" id="txtEnd" size="50" ths="4" prv="3" nxt="5" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>CEP:</td>
+							<td><input class="input" type="text" name="txtCep" id="txtCep" size="8" ths="5" prv="4" nxt="6" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>Carteira:</td>
+							<td><%=carteira.getCombo("txtCrt", "class=\"input\" ths=\"6\" prv=\"5\" nxt=\"7\" onkeydown=\"javascript: verTab(event);\" ", txtCrt)%></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>End.Carteira:</td>
+							<td><input class="input" type="text" name="txtEnc" id="txtEnc" size="40" ths="7" prv="6" nxt="8" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>Banco:</td>
+							<td><input class="input" type="text" name="txtBnc" id="txtBnc" size="3" ths="8" prv="7" nxt="9" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>Agência:</td>
+							<td><input class="input" type="text" name="txtAgn" id="txtAgn" size="4" ths="9" prv="8" nxt="10" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>Conta:</td>
+							<td><input class="input" type="text" name="txtCta" id="txtCta" size="20" ths="10" prv="9" nxt="11" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>Favorecido:</td>
+							<td><input class="input" type="text" name="txtFav" id="txtFav" size="50" ths="11" prv="10" nxt="12" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr class="cabAcesso" height="26">
+							<td>e-Mail:</td>
+							<td><input class="input" type="text" name="txtEml" id="txtEml" size="50" ths="12" prv="11" nxt="20" onkeydown="javascript: return verTab(event);"></td>
+						</tr>
+						<tr><td colspan="2" bgcolor="#999999"><img src="img/trans1x1.gif" width="180" height="1" alt=""></td></tr>
+						<tr><td colspan="2" bgcolor="#eeeeee"><img src="img/trans1x1.gif" width="180" height="1" alt=""></td></tr>
+						<tr height="30">
+							<td colspan="2" valign="bottom">
+								<div name="divBtn" id="divBtn" align="center">
+									<input class="btnform" type="button" name="btnAcao" onclick="javascript: Submeter('V');" value="Voltar" ths="21" prv="20" nxt="1" onkeydown="javascript: return numeroValido(event);">
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									<input class="btnform" onclick="javascript: Submeter('A');" type="button" name="btnAcao" value="Incluir" ths="20" prv="12" nxt="21" onkeydown="javascript: return numeroValido(event);">
+								</div>
+								<div name="divPro" id="divPro" align="center" style="display: none; visibility: hidden;"><span class="tittab2b">Aguarde:&nbsp;&nbsp;</span><img src="img/progress.gif" border="0" alt="Aguarde, processando..." style="position: relative; top: 2px;"><span class="tittab2b">&nbsp;&nbsp;processando...</span></div>
+							</td>
+						</tr>
+						</form>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+			<td bgcolor="#888888" width="1"><img src="img/trans1x1.gif" width="1" height="100%" alt=""></td>
+		</tr>
+		<tr>
+			<td bgcolor="#888888" height="1" width="1"><img src="img/trans1x1.gif" width="1" height="1" alt=""></td>
+			<td bgcolor="#888888" height="1" width="100%"><img src="img/trans1x1.gif" width="100%" height="1" alt=""></td>
+			<td bgcolor="#888888" height="1" width="1"><img src="img/trans1x1.gif" width="1" height="1" alt=""></td>
+		</tr>
+		</table>
+	</td>
+	<td width="10" background="img/_shadow-right.gif" valign="top"><img src="img/_shadow-right-top.gif" width="10" height="10" border="0" alt=""></td>
+</tr>
+</table>
+</body>
+<script type="text/Javascript">
+function tab(e) {
+	e = window.event || e;
+	o = e.target || e.srcElement;
+	kc  = e.which || e.keyCode;
+	ret = null;
+	if (o.tagName == "INPUT" && (o.type == "button" || o.type == "BUTTON") && kc == 13) {
+		o.click();
+		return ;
+	}
+	if ( (o.tagName != "SELECT" && (kc == 40 || kc == 38 || kc == 13 || kc == 9)) || (o.tagName == "SELECT" && (kc == 37 || kc == 39 || kc == 13 || kc == 9)) ) {
+		prv = o.getAttribute("prv");
+		nxt = o.getAttribute("nxt");
+		for (i=0;i<form1.length; i++) {
+			if (o.tagName == "SELECT") {
+				if (kc == 37) {
+					if (form1[i].getAttribute("ths") == prv) {
+						ret = form1[i];
+						break;
+					}
+				} else {
+					if (form1[i].getAttribute("ths") == nxt) {
+						ret = form1[i];
+						break;
+					}
+				}
+			} else {
+				if (kc == 38) {
+					if (form1[i].getAttribute("ths") == prv) {
+						ret = form1[i];
+						break;
+					}
+				} else {
+					if (form1[i].getAttribute("ths") == nxt) {
+						ret = form1[i];
+						break;
+					}
+				}
+			}
+		}
+	}
+	if (ret != null) {
+		if (ret.style.display == "none") {
+			tab(ret);
+		} else {
+			ret.focus();
+		}
+	}
+}
+</script>
+</html>

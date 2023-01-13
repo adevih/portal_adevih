@@ -1,0 +1,7 @@
+<%@ include file="inc/incCabec.jsp"%>
+<%@ page import="java.io.*, com.cloudinary.*" %>
+<%
+	Cloudinary cloudinary = new Cloudinary("cloudinary://315236799838879:JCZI0tNtgAASbGJC6SZ0sixJiSk@hepslkhkv");
+	cloudinary.uploader().upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg", com.cloudinary.utils.ObjectUtils.emptyMap());
+%>
+<%@ include file="inc/incRodape.jsp"%>
